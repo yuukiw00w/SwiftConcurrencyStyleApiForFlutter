@@ -38,7 +38,7 @@ final class SampleApiImpl: SampleApi {
     
     func objectSampleAsync(parameter: Any?) async -> Result<Any?, any Error> {
         let testResult = await ObjectSampleTest.testAsync(parameter: parameter)
-        return .success(parameter)
+        return .success(testResult)
     }
     
     func objectSampleSync(parameter: Any?) throws -> Any? {
